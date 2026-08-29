@@ -2,18 +2,24 @@ export default function Button({
   text,
   onClick,
   variant = "primary",
-  disabled,
+  disabled = false,
 }) {
   const buttonStyles = {
     primary:
-      "border border-blue-500 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600",
+      "bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition",
     secondary:
-      "border border-gray-300 bg-gray-300 text-gray-500 px-4 py-2 rounded cursor-not-allowed",
+      "bg-gray-300 text-gray-700 px-4 py-2 rounded hover:bg-gray-400 transition",
+    danger:
+      "bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition",
   };
+
   return (
     <button
       onClick={onClick}
-      className={`${buttonStyles[variant]} cursor-pointer`}
+      className={`
+        ${buttonStyles[variant]} 
+        ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
+      `}
       disabled={disabled}
     >
       {text}

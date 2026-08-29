@@ -22,7 +22,7 @@ export default function Home() {
           disabled={true}
         />
       </div>
-      <div className="flex gap-4 mt-8">
+      <div className="flex gap-4 mt-4">
         <Card
           title="Card 1 Title"
           description="This is a description of the card."
@@ -46,14 +46,8 @@ export default function Home() {
           ]}
           data={[
             { id: 1, product: "Laptop", price: "$999", stock: "In Stock" },
-            {
-              id: 2,
-              product: "Headphones",
-              price: "$199",
-              stock: "Out of Stock",
-            },
-            { id: 3, product: "Smartwatch", price: "$299", stock: "In Stock" },
-            { id: 4, product: "Tablet", price: "$499", stock: "Limited" },
+            { id: 2, product: "Smartwatch", price: "$299", stock: "In Stock" },
+            { id: 3, product: "Tablet", price: "$499", stock: "Limited" },
           ]}
           striped={true}
         />
