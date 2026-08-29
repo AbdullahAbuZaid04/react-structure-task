@@ -1,4 +1,6 @@
 import Button from "../components/ui/Button";
+import Card from "../components/ui/Card";
+import heroImg from "../assets/hero.png";
 
 export default function Home() {
   return (
@@ -18,6 +20,20 @@ export default function Home() {
           variant="secondary"
           disabled={true}
         />
+      </div>
+      <div className="flex gap-4 mt-8">
+        <Card
+          title="Card 1 Title"
+          description="This is a description of the card."
+          image={heroImg}
+        />
+        <Card
+          title="Card 2 Title"
+          description="This is a description of the card."
+        >
+          <h3 className="text-lg font-semibold">Card with Children</h3>
+          <p>This card contains children elements.</p>
+        </Card>
       </div>
     </div>
   );
